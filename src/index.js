@@ -15,7 +15,9 @@ let page = 1;
 let hits = 0;
 
 let simpleLightbox = new SimpleLightbox('.gallery a ', {
+  captionsData: 'alt',
   captionDelay: 250,
+  captionPosition: 'bottom',
 });
 
 async function onSearch(e) {
