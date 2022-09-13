@@ -75,8 +75,7 @@ async function onBtnLoadMore() {
     if (hits === response.totalHits) {
       btnLoadMore.classList.add('is-hidden');
       Notiflix.Notify.info(
-        "We're sorry, but you've reached the end of search results.",
-        { position: 'center-center' }
+        "We're sorry, but you've reached the end of search results."
       );
     }
   } catch (error) {
