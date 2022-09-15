@@ -22,6 +22,8 @@ let simpleLightbox = new SimpleLightbox('.gallery a ', {
 
 async function onSearch(e) {
   e.preventDefault();
+  cleanSearch();
+  btnHidden();
 
   try {
     searchQuery = e.currentTarget.searchQuery.value;
@@ -30,6 +32,7 @@ async function onSearch(e) {
     if (searchQuery === '') {
       return;
     }
+
     const response = await fetchImg(searchQuery, page);
     hits = response.hits.length;
 
